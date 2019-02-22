@@ -1,2 +1,2 @@
 # JS-Drumkit
-Drum-Kit web implemented in JS
+Drum-Kit music web app implemented in JS
