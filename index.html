@@ -1,6 +1,5 @@
-<!DOCTYPE html>
 <html>
-<head>
+<head><meta charset="UTF-8">
     <title>
         Drum
 </title>
@@ -22,7 +21,7 @@
    <div data-key="69" class="key">
         <kbd>E</kbd>
         <span class="music">Boom</span>
-
+   </div>
 
     <div data-key="82" class="key">
         <kbd>R</kbd>
@@ -48,14 +47,20 @@
 <audio data-key="89" src="sound/tink.wav"></audio>
 
 <script>
-window.addEventListener('keydown',function(e){
-   const audio= document.querySelector(`audio[data-key="${e.keyCode}"]`);
+window.addEventListener("keydown",function(event){
+    const audio= document.querySelector(`audio[data-key="${event.keyCode}"]`);
+    const key= document.querySelector(`.key[data-key="${event.keyCode}"]`);
     console.log(audio);
-    //if(!audio) return;
+    console.log(key);
+    if(!audio) return;
     audio.currentTime=0;
     audio.play();
+    key.classList.add('modify');
+   
 
 });
+
+
 </script>
 
 </body>
