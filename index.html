@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="sac.css">
 </head>
 <body>
-<div class="alpha"></div>
+<div class="alpha">
 
   <div data-key="81" class="key">
       <kbd>Q</kbd>
@@ -38,6 +38,19 @@
         <span class="music">Tink</span>
    </div>
 
+   <div data-key="85" class="key">
+    <kbd>U</kbd>
+    <span class="music">HiHat</span>
+  </div>
+  <div data-key="73" class="key">
+    <kbd>I</kbd>
+    <span class="music">OpenHat</span>
+  </div>
+  <div data-key="79" class="key">
+    <kbd>O</kbd>
+    <span class="music">Snare</span>
+  </div>
+
 </div>
 <audio data-key="81" src="sound/clap.wav"></audio>
 <audio data-key="87" src="sound/kick.wav"></audio>
@@ -45,6 +58,9 @@
 <audio data-key="82" src="sound/ride.wav"></audio>
 <audio data-key="84" src="sound/tom.wav"></audio>
 <audio data-key="89" src="sound/tink.wav"></audio>
+<audio data-key="85" src="sound/hihat.wav"></audio>
+<audio data-key="73" src="sound/openhat.wav"></audio>
+<audio data-key="79" src="sound/snare.wav"></audio>
 
 <script>
 window.addEventListener("keydown",function(event){
@@ -59,7 +75,12 @@ window.addEventListener("keydown",function(event){
    
 
 });
+function rmTrans(event){
+    console.log(event); 
 
+}
+const keys= document.querySelectorAll('.key');
+keys.forEach(key =>key.addEventListener('transitionend',rmTrans));
 
 </script>
 
