@@ -2,33 +2,41 @@ html {
   font-size:10px;
   background: url(sac.jpg) bottom center;
   background-size: cover;
-  
+  scroll-behavior: smooth;
+  background-attachment: fixed;
   
 }
 
 body,html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 .alpha{
   display:flex;
   flex: 1;
-  min-height: 100vh;
+  min-height: 70vh;
   align-items: center;
   justify-content: center;
  
   
 }
+.head{
+margin-top: 5rem;
+color:yellow;
+text-align: center;
+font-size: 300%;
 
-.key {
+}
+
+.key{
   border: .4rem solid red;
   border-radius: .5rem;
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
-  transition: all .1s ease;
+  transition: all .07s ease;
   width: 10rem;
   text-align: center;
   color: white;
